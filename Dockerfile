@@ -10,12 +10,9 @@ RUN apt-get install -y pcsx2 xauth
 RUN dpkg-reconfigure locales && locale-gen en_US.UTF-8 && /usr/sbin/update-locale LANG=en_US.UTF-8
 
 RUN useradd pcsx2
-USER pcsx2
 WORKDIR /home/pcsx2
 
 RUN touch /home/pcsx2/.Xauthority
+USER pcsx2
 
-ADD start-pcsx2.sh /usr/bin/start-pcsx2.sh
-RUN chmod +x /usr/bin/start-pcsx2.sh
-
-CMD ["/usr/bin/start-pcsx2.sh"]
+CMD ["/usr/games/pcsx2"]

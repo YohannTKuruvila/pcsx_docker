@@ -17,6 +17,13 @@ brew install socat
 brew cask install xquartz
 ```
 
+## Run
+
+```shell
+chmod +x start-pcsx2.sh
+./start-pcsx2.sh
+```
+
 ## TODO
 
 - [x] Init docker image build
