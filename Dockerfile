@@ -6,6 +6,7 @@ RUN sed -i 's/archive/old-releases/g' /etc/apt/sources.list
 
 RUN apt-get update
 RUN apt-get install -y pcsx2 xauth
+RUN apt-get install -y libgl1-mesa-glx libgl1-mesa-dri
 
 RUN dpkg-reconfigure locales && locale-gen en_US.UTF-8 && /usr/sbin/update-locale LANG=en_US.UTF-8
 
